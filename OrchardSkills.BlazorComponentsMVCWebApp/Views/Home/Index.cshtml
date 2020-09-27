@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <!--
+    There are 3 available render modes:
+    Static:            Renders the component into static HTML. In this case, there is no interactivity and you can remove the blazor.server.js script.
+    Server:            Renders a marker for a Blazor server-side application. This doesn't include any output from the component.
+                       When the user-agent starts, it uses this marker to bootstrap a blazor application. 
+                       This means until the SignalR connection is set up, there is nothing visible for the user.
+    ServerPrerendered: Renders the component into static HTML and includes a marker for a Blazor server-side application. When the user-agent starts,
+                       it uses this marker to bootstrap a blazor application. This means until the SignalR connection is set up,
+                       the user can see the content of the component but cannot interact with it.
+    -->
+    <component type="typeof(OrchardSkills.BlazorComponentsMVCWebApp.Components.Counter)" param-InitialValue="0" render-mode="Server" />
+</div>
+
+@section Scripts {
+    <script src="_framework/blazor.server.js"></script>
+}
